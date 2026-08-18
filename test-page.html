@@ -261,5 +261,37 @@ and    spaces</pre>
       resultDiv.innerHTML = '<strong>Form submitted!</strong><pre>' + JSON.stringify(data, null, 2) + '</pre>';
     });
   </script>
+
+
 </body>
+
+
+  <!-- Chatbot Widget -->
+    <link rel="stylesheet" href="widget.css">
+    <script src="widget.js"></script>
+
+    <link rel="stylesheet" href="https://https://ai-chatbox-th-jgm7.vercel.app/widget.css">
+<div id="chat-widget-container">
+    <div class="chat-widget-header">
+        <div class="header-info">
+            <div class="header-avatar"><img src="avatar.png" alt="Avatar"></div>
+            <div class="header-text">
+                <h3 class="header-title">Trợ lý ảo</h3>
+                <p class="header-subtitle">Hỗ trợ Tân Hưng</p>
+            </div>
+        </div>
+    </div>
+    <div id="chat-messages" class="chat-messages">
+        <div class="welcome-message">
+            <p>Xin chào! Tôi là trợ lý ảo. Bạn cần hỗ trợ gì?</p>
+        </div>
+    </div>
+    <div class="chat-input-area">
+        <input type="text" id="chat-input" placeholder="Nhập tin nhắn...">
+        <button id="send-btn">Gửi</button>
+    </div>
+</div>
+<button id="chat-widget-toggle">💬</button>
+<script src="https://https://ai-chatbox-th-jgm7.vercel.app/widget.js"></script>
+
 </html>
