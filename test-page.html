@@ -97,30 +97,50 @@
 <body>
 
   <!-- Chatbot Widget -->
-  <!-- Chatbot Widget -->
-<link rel="stylesheet" href="https://ai-chatbox-th-jgm7.vercel.app/widget.css">
-<div id="chat-widget-container">
-    <div class="chat-widget-header">
-        <div class="header-info">
-            <div class="header-avatar"><img src="avatar.png" alt="Avatar"></div>
-            <div class="header-text">
-                <h3 class="header-title">Trợ lý ảo</h3>
-                <p class="header-subtitle">Hỗ trợ Tân Hưng</p>
+
+<button id="chat-widget-toggle" class="chat-widget-toggle" aria-label="Mở trợ lý ảo">
+        <span class="toggle-icon">💬</span>
+        <span class="toggle-close">✕</span>
+    </button>
+
+    <div id="chat-widget-container" class="chat-widget-container">
+        <div class="chat-widget-header">
+            <div class="header-info">
+                <div class="header-avatar"><img src="avatar.png" alt="Avatar"></div>
+                <div class="header-text">
+                    <h3 class="header-title">Trợ lý ảo UBND Phường Tân Hưng</h3>
+                    <p class="header-subtitle">Hỗ trợ Phường Tân Hưng</p>
+                </div>
+            </div>
+            <button id="chat-widget-close" class="chat-widget-close" aria-label="Đóng">✕</button>
+        </div>
+
+        <div id="chat-messages" class="chat-messages">
+            <div class="welcome-message">
+                <div class="welcome-avatar"><img src="avatar.png" alt="Avatar"></div>
+                <div class="welcome-bubble">
+                    <p>Chào quý cô chú, anh chị và các bạn đến với Trợ lý ảo Phường Tân Hưng. Tôi rất vui khi được hỗ trợ! Hãy nói tôi biết cô, chú, anh, chị muốn biết gì về phường Tân Hưng.</p>
+                    <span class="message-time">Vừa xong</span>
+                </div>
             </div>
         </div>
-    </div>
-    <div id="chat-messages" class="chat-messages">
-        <div class="welcome-message">
-            <p>Xin chào! Tôi là trợ lý ảo. Bạn cần hỗ trợ gì?</p>
+
+        <div class="chat-input-area">
+            <input 
+                type="text" 
+                id="chat-input" 
+                class="chat-input" 
+                placeholder="Nhập tin nhắn..." 
+                autocomplete="off"
+            >
+            <button id="send-btn" class="send-btn" aria-label="Gửi">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+            </button>
         </div>
     </div>
-    <div class="chat-input-area">
-        <input type="text" id="chat-input" placeholder="Nhập tin nhắn...">
-        <button id="send-btn">Gửi</button>
-    </div>
-</div>
-<button id="chat-widget-toggle">💬</button>
-<script src="https://ai-chatbox-th-jgm7.vercel.app/widget.js"></script>
 
 
   <div class="container">
