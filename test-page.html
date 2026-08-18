@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Page</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #f5f5f5;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #333;
+    }
+    h2 {
+      color: #555;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 10px;
+    }
+    form {
+      margin: 20px 0;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    input[type="radio"],
+    input[type="checkbox"] {
+      margin-right: 5px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background: #f2f2f2;
+    }
+    .result {
+      margin-top: 20px;
+      padding: 15px;
+      background: #e8f5e9;
+      border: 1px solid #4caf50;
+      border-radius: 4px;
+      display: none;
+    }
+    ul, ol {
+      margin: 10px 0;
+    }
+    a {
+      color: #007bff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Sample Test Page</h1>
+    <p>This is a test page for testing HTML elements, forms, and basic interactivity.</p>
+
+    <h2>Text Elements</h2>
+    <p>This is a <strong>bold</strong> paragraph with <em>italic</em>, <mark>highlighted</mark>, <del>deleted</del>, and <ins>inserted</ins> text.</p>
+    <blockquote>This is a blockquote for testing purposes.</blockquote>
+    <pre>This is preformatted text
+with multiple lines
+and    spaces</pre>
+    <code>const x = 10;</code>
+
+    <h2>Links</h2>
+    <ul>
+      <li><a href="#section1">Jump to Section 1</a></li>
+      <li><a href="https://example.com" target="_blank">External Link (opens in new tab)</a></li>
+    </ul>
+
+    <h2>Lists</h2>
+    <h3>Unordered List</h3>
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2
+        <ul>
+          <li>Nested Item A</li>
+          <li>Nested Item B</li>
+        </ul>
+      </li>
+      <li>Item 3</li>
+    </ul>
+
+    <h3>Ordered List</h3>
+    <ol>
+      <li>First step</li>
+      <li>Second step</li>
+      <li>Third step</li>
+    </ol>
+
+    <h2>Table</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Alice</td>
+          <td>alice@example.com</td>
+          <td>Active</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Bob</td>
+          <td>bob@example.com</td>
+          <td>Inactive</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Charlie</td>
+          <td>charlie@example.com</td>
+          <td>Active</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Form</h2>
+    <form id="testForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email">
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" placeholder="Enter your password">
+
+      <label for="country">Country:</label>
+      <select id="country" name="country">
+        <option value="">-- Select a country --</option>
+        <option value="us">United States</option>
+        <option value="uk">United Kingdom</option>
+        <option value="ca">Canada</option>
+        <option value="de">Germany</option>
+      </select>
+
+      <label>Gender:</label>
+      <input type="radio" id="male" name="gender" value="male"> <label for="male" style="display:inline;">Male</label>
+      <input type="radio" id="female" name="gender" value="female"> <label for="female" style="display:inline;">Female</label>
+      <input type="radio" id="other" name="gender" value="other"> <label for="other" style="display:inline;">Other</label>
+
+      <label>Interests:</label>
+      <input type="checkbox" id="sports" name="interests" value="sports"> <label for="sports" style="display:inline;">Sports</label>
+      <input type="checkbox" id="music" name="interests" value="music"> <label for="music" style="display:inline;">Music</label>
+      <input type="checkbox" id="reading" name="interests" value="reading"> <label for="reading" style="display:inline;">Reading</label>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" placeholder="Enter your message"></textarea>
+
+      <label for="file">Upload File:</label>
+      <input type="file" id="file" name="file">
+
+      <label for="color">Color Picker:</label>
+      <input type="color" id="color" name="color" value="#007bff">
+
+      <label for="date">Date:</label>
+      <input type="date" id="date" name="date">
+
+      <button type="submit">Submit Form</button>
+      <button type="reset">Reset Form</button>
+    </form>
+
+    <div id="formResult" class="result"></div>
+
+    <h2>Media</h2>
+    <h3>Image Placeholder</h3>
+    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='200'%3E%3Crect width='400' height='200' fill='%23ddd'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='20' fill='%23666'%3EPlaceholder Image%3C/text%3E%3C/svg%3E" alt="Placeholder image" width="400" height="200">
+
+    <h3>Video Placeholder</h3>
+    <video width="400" controls>
+      <source src="#" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <h2>Interactive Elements</h2>
+    <details>
+      <summary>Click to expand details</summary>
+      <p>This is the hidden content inside the details element.</p>
+    </details>
+
+    <h2>Sections</h2>
+    <section id="section1">
+      <h3>Section 1</h3>
+      <p>This is section 1 content for anchor link testing.</p>
+    </section>
+
+    <footer>
+      <p>&copy; 2026 Test Page. Built for testing purposes.</p>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('testForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const formData = new FormData(e.target);
+      const data = {};
+      formData.forEach((value, key) => {
+        if (data[key]) {
+          if (Array.isArray(data[key])) {
+            data[key].push(value);
+          } else {
+            data[key] = [data[key], value];
+          }
+        } else {
+          data[key] = value;
+        }
+      });
+      const resultDiv = document.getElementById('formResult');
+      resultDiv.style.display = 'block';
+      resultDiv.innerHTML = '<strong>Form submitted!</strong><pre>' + JSON.stringify(data, null, 2) + '</pre>';
+    });
+  </script>
+</body>
+</html>
